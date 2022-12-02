@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod ugo+x */
+chown -h vincent:staff _hello
