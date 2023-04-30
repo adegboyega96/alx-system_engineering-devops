@@ -3,20 +3,15 @@
 # displays 9 and then bad luck from Japan for the 9th loop iteration
 # displays 17 and then bad luck from Italy for the 17th loop iteration
 
-count=1
+i=1
 
-while [[ "$count" -le 20 ]]; do
-  if [ "$count" -eq 4 ]; then
-    echo "bad luck from China"
-    count=$((count + 1))
-  elif [ "$count" -eq 9 ]; then
-    echo "bad luck from Japan"
-    count=$((count + 1))
-  elif [ "$count" -eq 17 ]; then
-    echo "bad luck from Italy"
-    count=$((count + 1))
-  fi
-  echo "$count"
-  count=$((count + 1))
-  done
-
+while [ $i -le 20 ]
+do
+  echo "$i"
+  case $i in
+    "4") echo "bad luck from China";;
+    "9") echo "bad luck from Japan";;
+    "17") echo "bad luck from Italy";;
+  esac
+  (( i++ ))
+done
